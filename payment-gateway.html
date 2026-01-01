@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway - Society Maintenance Managing System</title>
+    <meta name="description" content="Secure payment gateway for society bills">
+    <meta name="keywords" content="payment, bill payment, society management">
+    <meta property="og:title" content="Payment Gateway - Society Maintenance Managing System">
+    <meta property="og:description" content="Secure payment gateway for society bills">
+    <meta name="twitter:title" content="Payment Gateway - Society Maintenance Managing System">
+    <meta name="twitter:description" content="Secure payment gateway for society bills">
+
+    <script crossorigin src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #f1f5f9;
+            --accent-color: #059669;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply px-6 py-3 bg-[var(--primary-color)] text-white rounded-lg font-medium hover:bg-blue-700 transition-colors;
+        }
+        
+        .card {
+            @apply bg-white rounded-xl shadow-sm border border-[var(--border-color)] p-6;
+        }
+        
+        .input-field {
+            @apply w-full px-4 py-3 border border-[var(--border-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent;
+        }
+        
+        .payment-method {
+            @apply p-4 border-2 border-[var(--border-color)] rounded-lg cursor-pointer hover:border-[var(--primary-color)] transition-colors;
+        }
+        
+        .payment-method.active {
+            @apply border-[var(--primary-color)] bg-blue-50;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/PaymentGateway.js"></script>
+    <script type="text/babel" src="payment-gateway-app.js"></script>
+</body>
+</html>

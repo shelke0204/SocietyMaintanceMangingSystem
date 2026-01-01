@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPI Payment - Society Maintenance Managing System</title>
+    <meta name="description" content="Secure UPI payment for society bills">
+    <meta name="keywords" content="UPI payment, bill payment, society management">
+    <meta property="og:title" content="UPI Payment - Society Maintenance Managing System">
+    <meta property="og:description" content="Secure UPI payment for society bills">
+
+    <script crossorigin src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #f8fafc;
+            --accent-color: #3b82f6;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all;
+        }
+        
+        .card {
+            @apply bg-white rounded-2xl shadow-lg border border-[var(--border-color)] p-6;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/UPIPayment.js"></script>
+    <script type="text/babel" src="upi-payment-app.js"></script>
+</body>
+</html>

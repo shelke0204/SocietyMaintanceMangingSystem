@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Registration - Society Maintenance Managing System</title>
+    <meta name="description" content="Register as secretary or admin for society maintenance managing system">
+    <meta name="keywords" content="admin registration, secretary, society management">
+    <meta property="og:title" content="Admin Registration - Society Maintenance Managing System">
+    <meta property="og:description" content="Register as secretary or admin for society maintenance managing system">
+    <meta name="twitter:title" content="Admin Registration - Society Maintenance Managing System">
+    <meta name="twitter:description" content="Register as secretary or admin for society maintenance managing system">
+
+    <script crossorigin src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <script src="utils/localStorageDB.js"></script>
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #2563eb;
+            --secondary-color: #f1f5f9;
+            --accent-color: #059669;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply px-6 py-3 bg-[var(--primary-color)] text-white rounded-lg font-medium hover:bg-blue-700 transition-colors;
+        }
+        
+        .btn-secondary {
+            @apply px-6 py-3 bg-[var(--secondary-color)] text-[var(--text-primary)] rounded-lg font-medium hover:bg-slate-200 transition-colors border border-[var(--border-color)];
+        }
+        
+        .input-field {
+            @apply w-full px-4 py-3 border border-[var(--border-color)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] focus:border-transparent;
+        }
+        
+        .form-group {
+            @apply mb-4;
+        }
+        
+        .form-label {
+            @apply block text-sm font-medium text-[var(--text-primary)] mb-2;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script type="text/babel" src="components/PasswordInput.js"></script>
+    <script type="text/babel" src="components/AdminRegisterForm.js"></script>
+    <script type="text/babel" src="admin-register-app.js"></script>
+</body>
+</html>

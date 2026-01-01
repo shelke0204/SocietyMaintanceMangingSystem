@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Dashboard - Society Maintenance Managing System</title>
+    <meta name="description" content="Resident dashboard for society maintenance managing system">
+    <meta name="keywords" content="resident dashboard, society management">
+    <meta property="og:title" content="Resident Dashboard - Society Maintenance Managing System">
+    <meta property="og:description" content="Resident dashboard for society maintenance managing system">
+    <meta name="twitter:title" content="Resident Dashboard - Society Maintenance Managing System">
+    <meta name="twitter:description" content="Resident dashboard for society maintenance managing system">
+
+    <script crossorigin src="https://resource.trickle.so/vendor_lib/unpkg/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://resource.trickle.so/vendor_lib/unpkg/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://resource.trickle.so/vendor_lib/unpkg/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://resource.trickle.so/vendor_lib/unpkg/lucide-static@0.516.0/font/lucide.css" rel="stylesheet">
+    <script src="utils/localStorageDB.js"></script>
+
+    <style type="text/tailwindcss">
+    @layer theme {
+        :root {
+            --primary-color: #0f172a;
+            --secondary-color: #f8fafc;
+            --accent-color: #3b82f6;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --error-color: #ef4444;
+        }
+    }
+
+    @layer components {
+        .btn-primary {
+            @apply px-4 py-2 sm:px-6 sm:py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-xl font-semibold hover:shadow-lg transition-all text-sm sm:text-base;
+        }
+        
+        .btn-secondary {
+            @apply px-4 py-2 sm:px-6 sm:py-3 bg-white text-[var(--text-primary)] rounded-xl font-medium hover:bg-gray-50 transition-all border border-[var(--border-color)] shadow-sm text-sm sm:text-base;
+        }
+        
+        .card {
+            @apply bg-white rounded-2xl shadow-lg border border-[var(--border-color)] p-4 sm:p-6 hover:shadow-xl transition-all;
+        }
+        
+        .sidebar-item {
+            @apply flex items-center px-4 py-3 rounded-lg text-[var(--text-secondary)] hover:bg-[var(--secondary-color)] hover:text-[var(--primary-color)] transition-colors cursor-pointer;
+        }
+        
+        .sidebar-item.active {
+            @apply bg-[var(--primary-color)] text-white hover:bg-blue-700 hover:text-white;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.31/jspdf.plugin.autotable.min.js"></script>
+    <script type="text/javascript" src="utils/sessionManager.js"></script>
+    <script type="text/babel" src="components/ResidentSidebar.js"></script>
+    <script type="text/babel" src="components/ResidentHeader.js"></script>
+    <script type="text/babel" src="components/ResidentDashboard.js"></script>
+    <script type="text/babel" src="components/ResidentBills.js"></script>
+    <script type="text/babel" src="components/ResidentNotices.js"></script>
+    <script type="text/babel" src="components/ResidentComplaints.js"></script>
+    <script type="text/babel" src="components/ResidentWaterSchedule.js"></script>
+    <script type="text/babel" src="resident-dashboard-app.js"></script>
+</body>
+</html>
